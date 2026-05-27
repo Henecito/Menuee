@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Swal from "sweetalert2";
-import { supabase } from "../supabaseClient";
+import { useSucursal } from "../context/SucursalContext";
 import { getSucursalesByLocal, updateSucursal } from "../services/sucursalesService";
 import {
   horariosPorDiaDesdeDb,
@@ -110,6 +110,7 @@ function fixLeafletDefaultIcons(L) {
 }
 
 export default function Sucursales() {
+  const { profile, loading: contextLoading } = useSucursal();
   const [sucursales, setSucursales] = useState([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -179,29 +180,15 @@ export default function Sucursales() {
   }, [localId, editId]);
 
   useEffect(() => {
-    async function loadLocalId() {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+    if (contextLoading) return;
 
-      if (!user) return;
-
-      const { data: profile, error } = await supabase
-        .from("profiles")
-        .select("local_id")
-        .eq("id", user.id)
-        .single();
-
-      if (error) {
-        console.error(error);
-        return;
-      }
-
-      setLocalId(profile?.local_id || null);
+    if (profile?.local_id) {
+      setLocalId(profile.local_id);
+      return;
     }
 
-    loadLocalId();
-  }, []);
+    setLoading(false);
+  }, [contextLoading, profile?.local_id]);
 
   useEffect(() => {
     load();

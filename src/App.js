@@ -40,9 +40,9 @@ function getFirstAllowedPath(permisos = {}, rol) {
           typeof permisos.caja === "object" &&
           permisos.caja.ver === true),
     },
-    { path: "/sucursales", allowed: true },
     { path: "/usuarios", allowed: permisos.usuarios === true },
     { path: "/reportes", allowed: permisos.reportes === true },
+    { path: "/sucursales", allowed: true },
   ];
 
   const first = orderedViews.find((view) => view.allowed);
@@ -50,9 +50,11 @@ function getFirstAllowedPath(permisos = {}, rol) {
 }
 
 function DashboardHome() {
-  const { permisos = {}, rol, loading } = useSucursal();
+  const { permisos = {}, rol, loading, authReady } = useSucursal();
 
-  if (loading) return <p className="px-4 pt-4">Cargando datos...</p>;
+  if (!authReady || loading) {
+    return <p className="px-4 pt-4">Cargando datos...</p>;
+  }
   if (rol === "admin") return <Dashboard />;
   if (permisos.resumen === true) return <Dashboard />;
 

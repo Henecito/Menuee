@@ -6,9 +6,9 @@ import { accesoModuloCaja } from "../utils/cajaPermisos";
  * Protege rutas de caja: admin o `permisos.caja[accion] === true`.
  */
 export default function CajaPermisoRoute({ accion, children }) {
-  const { permisos, rol, loading } = useSucursal();
+  const { permisos, rol, loading, authReady } = useSucursal();
 
-  if (loading) {
+  if (!authReady || loading) {
     return <p className="px-4 pt-4 text-secondary">Cargando…</p>;
   }
 
