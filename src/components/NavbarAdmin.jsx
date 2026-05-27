@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 import { useSucursal } from "../context/SucursalContext";
 import { useEffect, useState } from "react";
 
 export default function NavbarAdmin() {
+  const navigate = useNavigate();
   const { sucursales, sucursalActiva, setSucursalActiva, loading, rol } =
     useSucursal();
   const isAdmin = rol === "admin";
@@ -11,7 +13,7 @@ export default function NavbarAdmin() {
 
   async function logout() {
     await supabase.auth.signOut();
-    window.location.href = "/login";
+    navigate("/login", { replace: true });
   }
 
   useEffect(() => {
