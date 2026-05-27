@@ -2,6 +2,7 @@
   "name": "gastro-admin",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://henecito.github.io/Menuee",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@supabase/supabase-js": "^2.88.0",
@@ -25,7 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "comanda-bridge": "node scripts/comanda-print-bridge.mjs"
+    "comanda-bridge": "node scripts/comanda-print-bridge.mjs",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
