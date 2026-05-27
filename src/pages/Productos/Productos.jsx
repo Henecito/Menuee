@@ -199,12 +199,12 @@ export default function Productos() {
     <div className="productos-page">
       <div className="productos-card">
         <div className="productos-header">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 12 }}>
-            <div>
+          <div className="productos-header-toolbar">
+            <div className="productos-header-main">
               <h2>Productos</h2>
               <p>Administra los productos de esta sucursal</p>
 
-              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              <div className="productos-header-actions">
                 <button
                   className="btn btn-sm btn-dark mt-2"
                   onClick={() => setVerInactivos(!verInactivos)}
@@ -221,17 +221,12 @@ export default function Productos() {
               </div>
             </div>
 
-            <div style={{ minWidth: 280 }}>
-              <label style={{ color: "#cbd5e1", fontSize: 12, marginBottom: 4, display: "block" }}>
+            <div className="productos-header-search">
+              <label className="productos-header-search-label">
                 Buscar producto
               </label>
               <input
-                className="productos-input"
-                style={{
-                  border: "1px solid #3b45ff",
-                  background: "#020617",
-                  boxShadow: "0 0 0 1px rgba(34,197,94,0.4)",
-                }}
+                className="productos-input productos-search-input"
                 placeholder="Nombre, categoría, precio o ID..."
                 value={busqueda}
                 onChange={(e) => setBusqueda(e.target.value)}
