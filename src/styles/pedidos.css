@@ -1,0 +1,49 @@
+.pedidos-page {
+  padding: 22px;
+}
+
+.pedidos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.pedidos-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: rgb(0, 0, 0);
+}
+
+/* ===== SWITCH MOSTRADOR / DELIVERY ===== */
+
+.pedidos-tabs {
+  display: flex;
+  gap: 6px;
+  background: #0b0d11;
+  padding: 6px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.pedido-tab {
+  text-decoration: none;
+  color: #9ca3af;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.pedido-tab:hover {
+  background: rgba(255,255,255,0.06);
+  color: white;
+}
+
+.pedido-tab.active {
+  background: linear-gradient(180deg,#1f2933,#111827);
+  color: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}

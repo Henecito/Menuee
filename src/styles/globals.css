@@ -1,0 +1,12 @@
+:root {
+  --color-bg: #f8f9fa;
+  --color-dark: #000;
+  --color-light: #fff;
+  --radius: 14px;
+  --shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+/* Reset opcional */
+body {
+  background: var(--color-bg);
+}

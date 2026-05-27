@@ -36,3 +36,109 @@
     transform: rotate(360deg);
   }
 }
+
+.list-group-item:hover {
+  background-color: #111 !important;
+}
+
+.list-group-item.active {
+  background-color: #111 !important;
+}
+
+/* ==== BASE DASHBOARD ===== */
+.dashboard-wrapper {
+  background: #f8f9fa;
+  min-height: calc(100vh - 56px); /* altura ajustada a la navbar */
+  padding: 1.5rem 1rem; /* margen interno */
+  display: flex;
+  flex-direction: column;
+}
+
+/* cards KPI */
+.kpi-card {
+  transition: 0.25s ease;
+  background: #fff;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+/* Íconos estilo anterior (los que te gustaban) */
+.kpi-card i {
+  background: black !important;
+  color: white !important;
+  border-radius: 14px !important;
+  font-size: 1.7rem;
+  padding: 0.75rem;
+}
+
+/* PLACEHOLDER */
+.placeholder {
+  padding: 3rem 0;
+  text-align: center;
+  color: #999;
+}
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ===================== */
+/* RESPONSIVE DASHBOARD */
+/* ===================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .dashboard-wrapper {
+    padding: 1rem 0.75rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .dashboard-wrapper {
+    padding: 0.75rem 0.5rem;
+    min-height: calc(100vh - 56px);
+  }
+
+  .kpi-card {
+    border-radius: 14px;
+  }
+
+  .modal-card {
+    max-width: 92%;
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+}
+
+/* Teléfonos muy chicos */
+@media (max-width: 420px) {
+  .dashboard-wrapper {
+    padding: 0.5rem 0.4rem;
+  }
+}

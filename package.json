@@ -3,20 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@supabase/supabase-js": "^2.88.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.8",
+    "chart.js": "^4.5.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "react-router-dom": "^7.10.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "supabase": "^2.67.2",
+    "sweetalert2": "^11.26.17",
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "comanda-bridge": "node scripts/comanda-print-bridge.mjs"
   },
   "eslintConfig": {
     "extends": [

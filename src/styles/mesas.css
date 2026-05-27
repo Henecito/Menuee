@@ -1,0 +1,236 @@
+.mesas-wrapper {
+  padding: 26px;
+  color: #0f172a;
+}
+
+/* HEADER */
+.mesas-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.mesas-top h2 {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.mesas-top span {
+  opacity: .6;
+  font-size: .9rem;
+}
+
+/* EDIT */
+.mesas-edit {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: .15s;
+}
+
+.mesas-edit:hover {
+  background: #f8fafc;
+}
+
+.mesas-edit.active {
+  background: #111827;
+  color: white;
+}
+
+/* PANEL */
+.mesas-panel {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+/* ZONAS */
+.zonas-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.zona-pill {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: .15s;
+}
+
+.zona-pill:hover {
+  background: #f1f5f9;
+}
+
+.zona-pill.active {
+  background: linear-gradient(135deg,#ff7a00,#ff9a00);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 14px rgba(255,122,0,.25);
+}
+
+.zona-x {
+  margin-left: 6px;
+  background: #ef4444;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 0 8px;
+}
+
+/* GRID MESAS */
+.mesas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.mesa {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px 14px;
+  text-align: center;
+  position: relative;
+  transition: .15s;
+}
+
+/* HOVER */
+.mesa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+/* NUMERO */
+.mesa-num {
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+/* ESTADO TEXTO */
+.mesa-status {
+  font-size: .8rem;
+  font-weight: 600;
+  opacity: .7;
+  text-transform: lowercase;
+}
+
+/* ESTADO COLORES */
+.mesa.libre {
+  border-color: #10b981;
+  background: linear-gradient(180deg,#ffffff,#ecfdf5);
+}
+
+.mesa.ocupada {
+  border-color: #ef4444;
+  background: linear-gradient(180deg,#ffffff,#fef2f2);
+}
+
+/* BADGE DOT */
+.mesa.libre::after,
+.mesa.ocupada::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.mesa.libre::after { background: #10b981; }
+.mesa.ocupada::after { background: #ef4444; }
+
+/* DELETE */
+.mesa-del {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: #ef4444;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: .75rem;
+  padding: 3px 6px;
+}
+
+/* ADD */
+.mesa-add {
+  margin-top: 22px;
+  display: flex;
+  gap: 10px;
+}
+
+.mesa-add input {
+  flex: 1;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.mesa-add button {
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.zona-new {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.zona-input {
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.15s;
+}
+
+.zona-input:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 2px rgba(255,122,0,0.15);
+}
+
+.zona-add-btn {
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ff7a00;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mesa-clickable {
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+
+.mesa-clickable:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.15);
+}
+
+.mesa-clickable:active {
+  transform: scale(.98);
+}

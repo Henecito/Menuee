@@ -1,0 +1,166 @@
+/* ================= PAGE ================= */
+
+.cocina-page {
+  padding: 22px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  background: #0a0c10;
+}
+
+/* ================= TOP ================= */
+
+.cocina-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 18px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cocina-top h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.cocina-sucursal {
+  font-size: 13px;
+  opacity: 0.65;
+  color: #cbd5e1;
+}
+
+.cocina-filtros {
+  display: flex;
+  gap: 8px;
+}
+
+.cocina-filtro-btn {
+  border: 1px solid #334155;
+  background: #111827;
+  color: #cbd5e1;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cocina-filtro-btn.active {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #fff;
+}
+
+/* ================= MONITOR ================= */
+
+.cocina-monitor {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 22px;
+  align-content: start;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* ================= CARD ================= */
+
+.cocina-card {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 16px;
+  padding: 18px 18px 16px 18px;
+  display: flex;
+  flex-direction: column;
+
+  border-left: 10px solid #22c55e;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+  min-height: 90px;
+  height: fit-content;
+}
+
+/* ================= HEAD ================= */
+
+.cocina-head {
+  margin-bottom: 10px;
+}
+
+.cocina-nombre {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+
+/* ================= ITEMS ================= */
+
+.cocina-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.cocina-item-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 8px;
+  border-bottom: 2px dashed #e5e7eb;
+}
+
+.cocina-item {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* ================= COMENTARIO ================= */
+
+.cocina-comentario {
+  font-size: 14px;
+  font-weight: 800;
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 4px 8px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+/* ================= EMPTY ================= */
+
+.cocina-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+  .cocina-top h2 {
+    font-size: 22px;
+  }
+
+  .cocina-card {
+    padding: 14px;
+  }
+
+  .cocina-nombre {
+    font-size: 18px;
+  }
+
+  .cocina-item {
+    font-size: 15px;
+  }
+
+  .cocina-comentario {
+    font-size: 13px;
+  }
+}

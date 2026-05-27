@@ -1,0 +1,462 @@
+/* ========== BASE (MÓVIL) ========== */
+
+.productos-page {
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.productos-card {
+  background: #0f1115;
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* HEADER */
+
+.productos-header h2 {
+  color: white;
+  font-weight: 700;
+  margin: 0;
+  font-size: 20px;
+}
+
+.productos-header p {
+  color: #8b8b8b;
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+/* FORM */
+
+.productos-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.productos-input {
+  width: 100%;
+  background: #0b0d11;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 12px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.productos-input.textarea {
+  resize: none;
+  min-height: 70px;
+}
+
+.productos-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-weight: 700;
+  padding: 14px;
+  font-size: 16px;
+}
+
+/* ========== TABLA + SCROLL ========== */
+
+.productos-table-box {
+  margin-top: 18px;
+  width: 100%;
+  background: #0b0d11;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  max-height: calc(100vh - 420px);
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.productos-table-box::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.productos-table-box::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.18);
+  border-radius: 10px;
+}
+
+.productos-table-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.32);
+}
+
+.productos-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+}
+
+.productos-table thead {
+  background: #121622;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.productos-table th {
+  text-align: left;
+  padding: 12px;
+  font-size: 11px;
+  color: #b5b5b5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.productos-table td {
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: white;
+  font-size: 14px;
+}
+
+.productos-table .precio {
+  font-weight: 600;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (min-width: 640px) {
+  .productos-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .productos-input.textarea {
+    grid-column: span 2;
+  }
+
+  .productos-table-box {
+    max-height: calc(100vh - 380px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .productos-form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .productos-input.textarea {
+    grid-column: span 3;
+  }
+
+  .productos-table-box {
+    max-height: calc(100vh - 360px);
+  }
+}
+
+/* ========== ACCIONES ========== */
+
+.productos-table .acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: 0.18s ease;
+  background: transparent;
+}
+
+.btn-edit {
+  background: rgba(37, 99, 235, 0.18);
+  color: #fff;
+}
+
+.btn-edit:hover {
+  background: rgba(37, 99, 235, 0.4);
+  transform: scale(1.08);
+}
+
+.btn-delete {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background: rgba(239, 68, 68, 0.4);
+  transform: scale(1.08);
+}
+
+/* ========== MODAL IMPORTAR ========== */
+
+.import-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.import-modal {
+  background: #0f1115;
+  border-radius: 16px;
+  padding: 22px;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  color: white;
+}
+
+.import-modal h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.import-modal p {
+  opacity: 0.7;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.import-dropzone {
+  margin-top: 16px;
+  border: 2px dashed rgba(255,255,255,0.2);
+  border-radius: 14px;
+  padding: 28px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.import-dropzone:hover {
+  border-color: #2563eb;
+  background: rgba(37,99,235,0.08);
+}
+
+.import-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.import-actions button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.import-actions button:first-child {
+  background: #1f2933;
+  color: white;
+}
+
+.import-actions button:last-child {
+  background: #2563eb;
+  color: white;
+}
+
+.import-actions button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ========== GRUPOS DE IMPRESIÓN ========== */
+
+.grupos-impresion-section {
+  margin-top: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0b0d11;
+}
+
+.grupos-impresion-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: none;
+  background: #121622;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.grupos-impresion-toggle span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grupos-impresion-body {
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.grupos-impresion-hint {
+  margin: 0 0 16px;
+  color: #8b8b8b;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.grupos-impresion-muted {
+  color: #8b8b8b;
+  font-size: 13px;
+  margin: 8px 0 0;
+}
+
+.grupos-impresion-block + .grupos-impresion-block {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.grupos-impresion-block h3 {
+  margin: 0 0 12px;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.grupos-impresion-form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.grupos-impresion-form-inline .productos-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.grupos-impresion-btn-sm {
+  width: auto;
+  padding: 12px 18px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.grupos-impresion-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grupos-impresion-lista li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #0f1115;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.grupos-impresion-lista li.inactivo {
+  opacity: 0.55;
+}
+
+.grupos-impresion-nombre {
+  color: white;
+  font-weight: 500;
+}
+
+.grupos-impresion-acciones {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.grupos-impresion-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.grupos-impresion-switch input {
+  accent-color: #2563eb;
+}
+
+.grupos-impresion-edit-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.grupos-impresion-edit-row .productos-input {
+  flex: 1;
+  min-width: 140px;
+}
+
+.grupos-impresion-categorias-box {
+  max-height: 280px;
+  overflow: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.grupos-impresion-categorias-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 360px;
+}
+
+.grupos-impresion-categorias-table th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 11px;
+  color: #b5b5b5;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #121622;
+  position: sticky;
+  top: 0;
+}
+
+.grupos-impresion-categorias-table td {
+  padding: 10px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 14px;
+}
+
+.grupos-impresion-select {
+  padding: 8px 10px;
+  font-size: 14px;
+  min-width: 160px;
+}

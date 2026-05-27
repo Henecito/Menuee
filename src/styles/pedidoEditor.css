@@ -1,0 +1,371 @@
+/* ================= BACKDROP ================= */
+
+.pem-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 12px;
+}
+
+/* ================= CARD ================= */
+
+.pem-card {
+  width: 100%;
+  max-width: 820px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 22px;
+  color: #0f172a;
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ================= HEADER ================= */
+
+.pem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pem-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #020617;
+}
+
+.pem-close {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #020617;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* ================= SECTIONS ================= */
+
+.pem-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pem-section label {
+  font-size: .85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* ================= INPUTS ================= */
+
+.pem-section input {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 11px 12px;
+  font-size: .95rem;
+  color: #020617;
+  outline: none;
+  width: 100%;
+}
+
+.pem-section input:focus {
+  border-color: #facc15;
+  background: #fff;
+}
+
+/* ================= BUSCADOR ================= */
+
+.pem-product-search {
+  font-weight: 600;
+}
+
+/* ================= RESULTADOS BUSCADOR ================= */
+
+.pem-product-results {
+  margin-top: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.pem-product-result {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: .15s;
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+.pem-product-result:hover {
+  background: #f1f5f9;
+}
+
+.pem-product-noresults {
+  margin-top: 6px;
+  font-size: .85rem;
+  color: #64748b;
+}
+
+/* ================= ITEM ROW ================= */
+
+.pem-item {
+  display: grid;
+  grid-template-columns: 2fr 110px 70px 2fr 38px;
+  gap: 10px;
+  align-items: center;
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+/* precio */
+.pem-item-precio {
+  max-width: 110px;
+  text-align: right;
+  font-weight: 700;
+}
+
+/* cantidad */
+.pem-item-cantidad {
+  max-width: 70px;
+  text-align: center;
+  font-weight: 800;
+  padding: 10px 6px !important;
+}
+
+/* quitar flechas number */
+.pem-item-cantidad::-webkit-outer-spin-button,
+.pem-item-cantidad::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pem-item-cantidad {
+  -moz-appearance: textfield;
+}
+
+/* ================= DELETE ================= */
+
+.pem-delete {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  font-size: 1rem;
+}
+
+/* ================= EMPTY ================= */
+
+.pem-empty {
+  text-align: center;
+  font-size: .9rem;
+  color: #64748b;
+  padding: 10px;
+}
+
+/* ================= TOTAL ================= */
+
+.pem-total-preview {
+  margin-top: 4px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #020617;
+  text-align: right;
+}
+
+/* ================= FOOTER ================= */
+
+.pem-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* botones */
+
+.pem-cancel {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #020617;
+  padding: 10px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pem-save {
+  background: linear-gradient(135deg, #facc15, #fde047);
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.pem-print {
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pem-print:hover:not(:disabled) {
+  background: #f1f5f9;
+}
+
+.pem-print:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.pem-positive {
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.pem-danger {
+  background: linear-gradient(135deg,#ef4444,#dc2626);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.pem-select {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 11px 12px;
+  font-size: .95rem;
+  color: #020617;
+  width: 100%;
+}
+
+.pem-mesa-cierre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.pem-mesa-productos-list .pem-mesa-producto-line {
+  cursor: default;
+}
+
+.pem-mesa-productos-list .pem-mesa-producto-line:hover {
+  background: #f8fafc;
+}
+
+.pem-mesa-comentario {
+  font-size: .8rem;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 640px) {
+
+  .pem-card {
+    border-radius: 18px;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .pem-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .pem-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .pem-delete {
+    width: 100%;
+  }
+
+  .pem-footer {
+    flex-direction: column-reverse;
+  }
+
+  .pem-footer button {
+    width: 100%;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+  .pem-card {
+    max-width: 95%;
+  }
+}
+
+.pem-map-box {
+  width: 100%;
+  height: 240px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  margin-top: 10px;
+}
+
+.pem-map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ================= GOOGLE AUTOCOMPLETE FIX ================= */
+
+.pac-container {
+  z-index: 99999 !important;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.pac-item {
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.pac-item:hover {
+  background: #f1f5f9;
+}
+

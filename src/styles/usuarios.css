@@ -1,0 +1,17 @@
+/* ====== BOTÓN NUEVO USUARIO ====== */
+
+/* Desktop: botón normal */
+.usuarios-add-btn {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.95rem;
+  width: auto;          /* <-- clave para que no se estire en desktop */
+}
+
+/* Móvil: full width pero sin exagerar el tamaño */
+@media (max-width: 768px) {
+  .usuarios-add-btn {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+  }
+}

@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* ===== NAVBAR DARK OVERRIDES ===== */
+
+.navbar select.form-select {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #333 !important;
+}
+
+.navbar select.form-select option {
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar .dropdown-menu {
+  background-color: #000;
+  border: 1px solid #222;
+}
+
+.navbar .dropdown-item,
+.navbar .dropdown-item-text {
+  color: #fff;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.navbar .dropdown-divider {
+  border-color: #222;
+}
+
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+
+.navbar .btn:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 0.95rem;
+  }
+}

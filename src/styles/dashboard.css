@@ -1,0 +1,26 @@
+.dashboard-wrapper {
+  min-height: calc(100vh - 56px);
+  padding: 1.5rem 1rem;
+  background: var(--color-bg);
+}
+
+.kpi-card {
+  transition: 0.25s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.kpi-icon {
+  width: 54px;
+  height: 54px;
+  background: var(--color-dark);
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light);
+  font-size: 1.6rem;
+}

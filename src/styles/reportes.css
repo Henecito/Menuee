@@ -1,0 +1,36 @@
+.chart-placeholder {
+  height: 220px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 13px;
+}
+
+.table-placeholder {
+  height: 220px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 13px;
+}
+
+
+.kpi-clickable {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.kpi-clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.kpi-clickable:active {
+  transform: scale(0.98);
+}
